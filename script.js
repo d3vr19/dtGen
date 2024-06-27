@@ -82,13 +82,15 @@ function formatXml(xml) {
 
 function downloadXSD() {
     const xsd = document.getElementById("output").value;
+    const rootElementName = document.getElementById("rootElementName").value || 'schema';
     const blob = new Blob([xsd], { type: 'application/xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'dt.xsd';
+    a.download = `${rootElementName}.xsd`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 }
+
