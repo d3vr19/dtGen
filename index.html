@@ -12,9 +12,9 @@
     <input type="text" id="targetNamespace" placeholder="Enter target namespace..." />
     <input type="text" id="rootElementName" placeholder="Enter root element name..." />
     <textarea id="jsonInput" placeholder='Enter JSON here...'></textarea><br>
-    <button onclick="generateXSD()">Generate Now</button>
+    <button id="generateButton" onclick="generateXSD()">Generate Now</button>
     <h2>Generated XSD:</h2>
     <textarea id="output" readonly></textarea><br>
-    <button onclick="downloadXSD()">Download XSD</button>
+    <button id="downloadButton" onclick="downloadXSD()">Download XSD</button>
 </body>
 </html>
